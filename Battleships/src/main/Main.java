@@ -9,15 +9,25 @@ public class Main {
 		Board board = new Board();
 		board.fillBoard();
 		System.out.println();
-		
-		IShip boat3 = Factory.createShip(ShipType.SUBMARINE, 2, 2, Placement.VERTICAL);
-		board.placeShip(boat3.getPosX(), boat3.getPosY(), boat3.getSize(), boat3.getPlacement());
-		
-		IShip boat2 = Factory.createShip(ShipType.BATTLESHIP, 2, 2, Placement.HORIZONTAL);
-		board.placeShip(boat2.getPosX(), boat2.getPosY(),boat2.getSize(), boat2.getPlacement());
-		
+		IShip carrier = Factory.createShip(ShipType.CARRIER);		//Size 5, C
+		board.placeShip(carrier.getShipType());
 
-		
+		IShip battleship = Factory.createShip(ShipType.BATTLESHIP);	//size 4, B
+		board.placeShip(battleship.getShipType());
+
+		IShip submarine1 = Factory.createShip(ShipType.SUBMARINE);		//size 3, S
+		board.placeShip(submarine1.getShipType());
+
+		IShip submarine2 = Factory.createShip(ShipType.SUBMARINE);		//size 3, S
+		board.placeShip(submarine2.getShipType());
+
+		IShip destroyer1 = Factory.createShip(ShipType.DESTROYER);		//Size 2, D
+		board.placeShip(destroyer1.getShipType());
+
+		IShip destroyer2 = Factory.createShip(ShipType.DESTROYER);		//Size 2, D
+		board.placeShip(destroyer2.getShipType());
+
+		System.out.println();
 		board.printBoard();
 	}
 }

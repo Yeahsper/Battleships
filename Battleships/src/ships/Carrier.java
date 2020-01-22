@@ -1,6 +1,6 @@
 package ships;
 
-import main.Placement;
+import main.Direction;
 
 public class Carrier implements IShip {
 
@@ -9,17 +9,17 @@ public class Carrier implements IShip {
 	private int posY;
 	private int size = 5;
 	private ShipType type = ShipType.CARRIER;
-	private Placement placement;
+	private Direction direction;
 
 	
 	public Carrier() {
 		
 	}
 
-	public Carrier(int posX, int posY, Placement placement) {
+	public Carrier(int posX, int posY, Direction direction) {
 		this.posX = posX;
 		this.posY = posY;
-		this.placement = placement;
+		this.direction = direction;
 	}
 
 
@@ -46,7 +46,7 @@ public class Carrier implements IShip {
 	
 
 	@Override
-	public Placement getPlacement() {
-		return placement;
+	public Direction getDirection() {
+		return direction;
 	}
 }

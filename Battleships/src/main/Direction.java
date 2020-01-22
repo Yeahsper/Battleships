@@ -1,6 +1,6 @@
 package main;
 
-public enum Placement {
+public enum Direction {
 	HORIZONTAL,
 	VERTICAL,
 }

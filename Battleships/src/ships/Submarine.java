@@ -1,6 +1,6 @@
 package ships;
 
-import main.Placement;
+import main.Direction;
 
 public class Submarine implements IShip {
 
@@ -9,7 +9,7 @@ public class Submarine implements IShip {
 	private int posY;
 	private int size = 3;
 	private ShipType type = ShipType.SUBMARINE;
-	private Placement placement;
+	private Direction direction;
 	
 
 	
@@ -17,10 +17,10 @@ public class Submarine implements IShip {
 		
 	}
 
-	public Submarine(int posX, int posY, Placement placement) {
+	public Submarine(int posX, int posY, Direction direction) {
 		this.posX = posX;
 		this.posY = posY;
-		this.placement = placement;
+		this.direction = direction;
 	}
 
 
@@ -46,7 +46,7 @@ public class Submarine implements IShip {
 	
 
 	@Override
-	public Placement getPlacement() {
-		return placement;
+	public Direction getDirection() {
+		return direction;
 	}
 }

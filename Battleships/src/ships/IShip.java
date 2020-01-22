@@ -1,6 +1,6 @@
 package ships;
 
-import main.Placement;
+import main.Direction;
 
 public interface IShip {
 	
@@ -8,5 +8,5 @@ public interface IShip {
 	public int getPosY();
 	public int getSize();
 	public ShipType getShipType();
-	public Placement getPlacement();
+	public Direction getDirection();
 }
