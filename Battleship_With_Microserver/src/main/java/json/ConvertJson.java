@@ -12,7 +12,7 @@ import org.json.JSONArray;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import main.Board;
+import etc.Board;
 
 public class ConvertJson {
 	//--Variables--

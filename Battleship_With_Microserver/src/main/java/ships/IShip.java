@@ -1,6 +1,6 @@
 package ships;
 
-import main.Direction;
+import etc.Direction;
 
 public interface IShip {
 	

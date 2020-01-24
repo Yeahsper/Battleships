@@ -5,9 +5,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import etc.Board;
+import etc.Factory;
 import json.ConvertJson;
-import main.Board;
-import main.Factory;
 import ships.IShip;
 import ships.ShipType;
 

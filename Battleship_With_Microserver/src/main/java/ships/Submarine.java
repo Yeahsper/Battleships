@@ -1,6 +1,6 @@
 package ships;
 
-import main.Direction;
+import etc.Direction;
 
 public class Submarine implements IShip {
 
