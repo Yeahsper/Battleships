@@ -5,14 +5,13 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-
-import generateboard.Board;
-import generateboard.Factory;
 import json.ConvertJson;
+import main.Board;
+import main.Factory;
 import ships.IShip;
 import ships.ShipType;
 
-
+//Path sets where this is, for example localhost:8080@Path
 @Path("/battleship")
 public class BattleshipEndpoint {
 
@@ -21,9 +20,10 @@ public class BattleshipEndpoint {
     public Response doGet() {
 		Board board = new Board();
 		ConvertJson convertJson = new ConvertJson();
-		board.fillBoard();
+		board.initBoard();
 		System.out.println();
 		
+		//Create ships and place them on the board
 		IShip carrier = Factory.createShip(ShipType.CARRIER);		//Size 5, C
 		board.placeShip(carrier.getShipType());
 
@@ -45,9 +45,10 @@ public class BattleshipEndpoint {
 		System.out.println();
 		board.printBoard();
 		
+		//Convert the board to JSON format
 		String temp = convertJson.toJson(board);
     	
-    	
+    	//Return the string and show it on the website
         return Response.ok(temp).build();
     }
 }

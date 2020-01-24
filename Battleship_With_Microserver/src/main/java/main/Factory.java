@@ -1,4 +1,4 @@
-package generateboard;
+package main;
 
 import ships.Battleship;
 import ships.Carrier;
@@ -7,6 +7,11 @@ import ships.IShip;
 import ships.ShipType;
 import ships.Submarine;
 
+/**
+ * Factory-pattern class for creating new Ships
+ * @author Jesper
+ *
+ */
 public class Factory {
 
 	public static IShip createShip(ShipType ship) {

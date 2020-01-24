@@ -6,7 +6,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;
 
-
+//Path sets where this is, for example localhost:8080@Path
 @Path("/faq")
 public class FaqEndpoint {
 	@GET

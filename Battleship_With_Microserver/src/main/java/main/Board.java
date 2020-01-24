@@ -1,16 +1,15 @@
-package generateboard;
+package main;
 
 import ships.ShipType;
 
 public class Board {
+	
 	//--Variables--
 	private final int rows = 10, columns = 10;
 	private char[][] board = new char[10][10];
 
 	
-	//--Constructor--
-	//--Methods--
-	
+	//--Methods--	
 	public void placeShip(ShipType shipType) {
 		boolean success = true;
 		char tempChar = 'x';
@@ -50,6 +49,7 @@ public class Board {
 					break;
 				}
 			}
+			//If no collision, then fill the array with the positions
 			if(success) {
 				System.out.println("Got space");
 				for(int i = 0; i < shipSize; i++) {
@@ -66,6 +66,7 @@ public class Board {
 					break;
 				}					
 			}
+			//If no collision, then fill the array with the positions
 			if(success) {
 				System.out.println("Got space");
 				for(int i = 0; i < shipSize; i++) {
@@ -80,7 +81,8 @@ public class Board {
 		}
 	}
 
-	public void fillBoard() {
+	//Initializes and fills the board with '0'
+	public void initBoard() {
 		for (int i = 0; i < rows ; i++) {
 			for (int j = 0; j < columns; j++) {
 				board[i][j] = '0';
@@ -88,7 +90,7 @@ public class Board {
 		}
 	}
 
-
+	//Prints out the board to the console.
 	public void printBoard() {
 		System.out.println("  A  B  C  D  E  F  G  H  I  J");
 		for(int i=0; i<10; i++)
@@ -118,6 +120,7 @@ public class Board {
 			return Direction.HORIZONTAL;
 	}
 
+	//Makes sure so you can't get ArrayIndexOutOfBounds
 	private int validatePosition(int pos, int shipSize) {
 		if(shipSize == 5 & pos >= 6) 
 			return pos = 6;

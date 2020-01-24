@@ -1,17 +1,17 @@
 package ships;
 
-import generateboard.Direction;
+import main.Direction;
 
 public class Carrier implements IShip {
 
-	
+	//--Variables--
 	private int posX;
 	private int posY;
 	private int size = 5;
 	private ShipType type = ShipType.CARRIER;
 	private Direction direction;
 
-	
+	//--Constructors--
 	public Carrier() {
 		
 	}
@@ -23,7 +23,7 @@ public class Carrier implements IShip {
 	}
 
 
-
+	//--Getters & Setters--
 	@Override
 	public int getPosX() {
 		return posX;

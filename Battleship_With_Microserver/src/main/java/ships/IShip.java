@@ -1,6 +1,6 @@
 package ships;
 
-import generateboard.Direction;
+import main.Direction;
 
 public interface IShip {
 	

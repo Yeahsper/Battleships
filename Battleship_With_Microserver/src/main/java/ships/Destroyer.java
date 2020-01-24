@@ -1,19 +1,18 @@
 package ships;
 
-import generateboard.Direction;
+import main.Direction;
 
 public class Destroyer implements IShip{
 
 
-	
+	//--Variables--
 	private int posX;
 	private int posY;
 	private int size = 2;
 	private ShipType type = ShipType.DESTROYER;
 	private Direction direction;
 	
-
-	
+	//--Constructors--
 	public Destroyer() {
 		
 	}
@@ -25,7 +24,7 @@ public class Destroyer implements IShip{
 	}
 
 
-
+	//--Getters & Setters--
 	@Override
 	public int getPosX() {
 		return posX;
@@ -46,7 +45,6 @@ public class Destroyer implements IShip{
 		return size;
 	}
 	
-
 	@Override
 	public Direction getDirection() {
 		return direction;

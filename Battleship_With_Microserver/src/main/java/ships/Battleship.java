@@ -1,9 +1,10 @@
 package ships;
 
-import generateboard.Direction;
+import main.Direction;
 
 public class Battleship implements IShip {
 	
+	//--Variables--
 	private int posX;
 	private int posY;
 	private int size = 4;
@@ -11,7 +12,7 @@ public class Battleship implements IShip {
 	private Direction direction;
 	
 
-	
+	//--Constructors--
 	public Battleship() {
 		
 	}
@@ -23,7 +24,7 @@ public class Battleship implements IShip {
 	}
 
 
-
+	//--Getters & Setters--
 	@Override
 	public int getPosX() {
 		return posX;
