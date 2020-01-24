@@ -7,6 +7,11 @@ public class Board {
 	int rows, columns;
 	public char[][] board = new char[10][10];
 
+	
+	//--Constructor--
+	public Board() {
+	}
+	
 	//--Methods--
 	
 	public void placeShip(ShipType shipType) {

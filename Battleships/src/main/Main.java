@@ -1,5 +1,6 @@
 package main;
 
+import json.ConvertJson;
 import ships.IShip;
 import ships.ShipType;
 
@@ -7,6 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Board board = new Board();
+		ConvertJson convertJson = new ConvertJson();
 		board.fillBoard();
 		System.out.println();
 		IShip carrier = Factory.createShip(ShipType.CARRIER);		//Size 5, C
@@ -29,5 +31,9 @@ public class Main {
 
 		System.out.println();
 		board.printBoard();
+		
+		convertJson.toJson(board);
+		
+		
 	}
 }
