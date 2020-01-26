@@ -18,7 +18,7 @@ public class Main {
 		ConvertJson convertJson = new ConvertJson();
 		
 		try {
-		board = convertJson.fromJson();
+		board = convertJson.convertFromJson();
 		board.printBoard();
 		} catch (IOException e) {
 			e.printStackTrace();

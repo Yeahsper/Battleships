@@ -36,7 +36,7 @@ public class ConvertJson {
 	 * @return
 	 * @throws IOException
 	 */
-	public Board fromJson() throws IOException{
+	public Board convertFromJson() throws IOException{
 		Gson gson = new Gson();
 		StringBuffer stringBuffer= new StringBuffer();
 		URL url= new URL("http://localhost:8080/battleship");
