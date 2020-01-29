@@ -10,7 +10,7 @@ import javax.ws.rs.Produces;
 @Path("/info")
 public class InfoEndpoint {
 	
-	String welcome = "Welcome to my Battleships. To run the microservices, you need to\n" + 
+	private String welcome = "Welcome to my Battleships. To run the microservices, you need to\n" + 
 			" start the microservice by choosing \"Run as Maven Build\"\n"+
 			" and with the goal as \"thorntail:run\". When it says \"Thorntail is Ready\" in the console\n"+
 			" you can enter through localhost:8080. \n\n"+
